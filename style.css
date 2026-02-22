@@ -1,0 +1,9 @@
+body { background-color: #121212; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+.player-container { background: #1e1e1e; padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); width: 90%; max-width: 400px; text-align: center; }
+#file-input { display: none; }
+.custom-file-upload { display: inline-block; padding: 12px 24px; background: #1DB954; color: white; border-radius: 30px; cursor: pointer; margin-bottom: 20px; font-weight: bold; }
+audio { width: 100%; margin: 20px 0; filter: invert(100%); }
+.playlist { list-style: none; padding: 0; max-height: 250px; overflow-y: auto; text-align: left; }
+.playlist li { padding: 12px; border-bottom: 1px solid #333; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.playlist li:hover { background: #282828; }
+.now-playing { margin: 20px 0; font-size: 14px; color: #1DB954; }
