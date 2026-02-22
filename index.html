@@ -1,16 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Player</title>
+    <title>Music Offline</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1DB954">
 </head>
 <body>
-    <h1>Music Player</h1>
-    <audio controls>
-        <source src="path/to/your/music/file.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    <p>Enjoy your music!</p>
+    <div class="player-container">
+        <h2>Meu Player</h2>
+        
+        <input type="file" id="file-input" accept="audio/*" multiple>
+        <label for="file-input" class="custom-file-upload">Selecionar Músicas</label>
+
+        <div class="now-playing">
+            <p id="track-name">Nenhuma música</p>
+        </div>
+
+        <audio id="audio-player" controls></audio>
+        <ul id="playlist" class="playlist"></ul>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
 </body>
 </html>
